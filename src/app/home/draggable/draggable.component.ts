@@ -8,13 +8,16 @@ import { Component, AfterViewInit, Input } from '@angular/core';
 export class DraggableComponent implements AfterViewInit {
   @Input() idx: string = '';
   @Input() windowNumber: number = 0;
-  @Input() header: boolean = true;
+  @Input() centered: boolean = false;
   @Input() headerText: string = '';
   @Input() childClass: string = '';
   @Input() headerClass: string = '';
 
   getWindowPositionLeft(): string {
-    return this.windowNumber * 255 + 'px';
+    return ((this.windowNumber % 4) * 365) + 'px';
+  }
+  getWindowPositionTop(): string {
+    return ((this.windowNumber - 4 < 0 ? 0 : (Math.floor(this.windowNumber / 4)) * 260)) + 'px';
   }
   ngAfterViewInit() {
     this.registerDragElement();

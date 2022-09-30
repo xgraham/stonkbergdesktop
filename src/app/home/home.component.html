@@ -1,4 +1,4 @@
-<app-draggable [header]=true idx="terminal" headerText="Stonkberg Terminal" childClass=terminal
+<app-draggable [centered]=true idx="terminal" headerText="Stonkberg Terminal" childClass=terminal
     headerClass="terminal-header">
     <app-terminal></app-terminal>
 </app-draggable>
@@ -6,8 +6,8 @@
 <!-- ngfor each stonk in stonklist -->
 
 <div *ngFor="let item of stonkSet; let i = index">
-    <app-draggable [windowNumber]=i [header]=true headerText="{{item}}" idx="{{item}}{{i}}" childClass="stonk">
-        <app-tvwidget top='55px' name="{{item}}" parentId="{{item}}{{i}}" widgetId="{{item}}{{i}}"></app-tvwidget>
+    <app-draggable [windowNumber]=i headerText="{{item}}" idx="{{item}}{{i}}" childClass="stonk">
+        <app-tvwidget name="{{item}}" parentId="{{item}}{{i}}" widgetId="{{item}}{{i}}"></app-tvwidget>
     </app-draggable>
 
 </div>
