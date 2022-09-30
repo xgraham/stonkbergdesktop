@@ -1,4 +1,5 @@
 .terminal {
+    z-index: 99 !important;
     background-color: #212121;
     color: #fff;
     border: 0 none;
