@@ -8,7 +8,8 @@
 
 
 <ng-template #elseBlock>
-    <div [class]='childClass' [id]="idx" class="draggable dragzone" style="background-color:black">
+    <div [class]='childClass' [id]="idx" class="draggable dragzone"
+        ng-style="{'background-color':'black';'left':{getPositionLeft()} }">
         <ng-container *ngTemplateOutlet="contentTpl"></ng-container>
 
     </div>

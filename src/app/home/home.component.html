@@ -6,7 +6,7 @@
 <!-- ngfor each stonk in stonklist -->
 
 <div *ngFor="let item of stonkSet; let i = index">
-    <app-draggable [header]=false idx="{{item}}{{i}}" childClass="stonk">
+    <app-draggable [windowNumber]=i [header]=false idx="{{item}}{{i}}" childClass="stonk">
         <app-tvwidget top='55px' name="{{item}}" parentId="{{item}}{{i}}" widgetId="{{item}}{{i}}"></app-tvwidget>
     </app-draggable>
 
