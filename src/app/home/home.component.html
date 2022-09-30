@@ -1,0 +1,13 @@
+<app-draggable [header]=true idx="terminal" headerText="Stonkberg Terminal" childClass=terminal
+    headerClass="terminal-header">
+    <app-terminal></app-terminal>
+</app-draggable>
+
+<!-- ngfor each stonk in stonklist -->
+
+<div *ngFor="let item of stonkSet; let i = index">
+    <app-draggable [header]=false idx="{{item}}{{i}}" childClass="stonk">
+        <app-tvwidget top='55px' name="{{item}}" parentId="{{item}}{{i}}" widgetId="{{item}}{{i}}"></app-tvwidget>
+    </app-draggable>
+
+</div>

@@ -1,0 +1,21 @@
+<div *ngIf="header; else elseBlock">
+    <div class="draggable" [class]='childClass' [id]="idx">
+        <div [class]="headerClass" class="dragzone">{{headerText}}</div>
+        <ng-container *ngTemplateOutlet="contentTpl"></ng-container>
+    </div>
+
+</div>
+
+
+<ng-template #elseBlock>
+    <div [class]='childClass' [id]="idx" class="draggable dragzone" style="background-color:black">
+        <ng-container *ngTemplateOutlet="contentTpl"></ng-container>
+
+    </div>
+</ng-template>
+
+
+
+<ng-template #contentTpl>
+    <ng-content></ng-content>
+</ng-template>

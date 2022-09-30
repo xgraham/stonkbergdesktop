@@ -1,0 +1,14 @@
+.draggable {
+    position: absolute;
+    z-index: 9;
+}
+
+.dragzone {
+    padding: 5px;
+    text-align: center;
+    border-bottom: 0 none;
+    background: #ffffff;
+    color: #343a40;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+}
